@@ -6,11 +6,11 @@ export class Page3 extends Component {
       <div>
         {/* Title & Breadcrumb */}
         <div className="page-header">
-          <h3 className="page-title">Halaman Ketiga</h3>
+          <h3 className="page-title">Blank Page 3</h3>
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
               <li className="breadcrumb-item"><a href="!#" onClick={event => event.preventDefault()}>Beranda</a></li>
-              <li className="breadcrumb-item active" aria-current="page">Halaman Ketiga</li>
+              <li className="breadcrumb-item active" aria-current="page">Blank Page 3</li>
             </ol>
           </nav>
         </div>
@@ -20,8 +20,8 @@ export class Page3 extends Component {
           <div className="col-lg-12 grid-margin stretch-card">
             <div className="card">
               <div className="card-body">
-                <h4 className="card-title">Konten Halaman Ketiga</h4>
-                <p className="card-description">Ini adalah area konten utama dari halaman ketiga.</p>
+                <h4 className="card-title">Konten Blank Page 3</h4>
+                <p className="card-description">Ini adalah area konten utama dari blank page ketiga.</p>
                 <p>Halaman ini menampilkan layout dasar dengan title, breadcrumb, dan card untuk konten.</p>
               </div>
             </div>

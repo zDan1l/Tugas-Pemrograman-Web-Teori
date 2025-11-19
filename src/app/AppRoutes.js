@@ -15,12 +15,12 @@ class AppRoutes extends Component {
       <Suspense fallback={<Spinner/>}>
         <Switch>
           {/* Routes Halaman Tugas */}
-          <Route path="/profil-mahasiswa" component={ Page1 } />
-          <Route path="/form-pendaftaran" component={ Page2 } />
-          <Route path="/daftar-mahasiswa" component={ Page3 } />
+          <Route path="/blank-page-1" component={ Page1 } />
+          <Route path="/blank-page-2" component={ Page2 } />
+          <Route path="/blank-page-3" component={ Page3 } />
 
           {/* Redirect root ke halaman pertama */}
-          <Redirect to="/profil-mahasiswa" />
+          <Redirect to="/blank-page-1" />
         </Switch>
       </Suspense>
     );

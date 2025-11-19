@@ -33,9 +33,9 @@ class Sidebar extends Component {
     });
 
     const dropdownPaths = [
-      {path:'/profil', state: 'menuOpen'},
-      {path:'/form', state: 'menuOpen'},
-      {path:'/daftar', state: 'menuOpen'},
+      {path:'/blank-page-1', state: 'menuOpen'},
+      {path:'/blank-page-2', state: 'menuOpen'},
+      {path:'/blank-page-3', state: 'menuOpen'},
     ];
 
     dropdownPaths.forEach((obj => {
@@ -65,7 +65,7 @@ class Sidebar extends Component {
           </li>
           
           {/* Menu Halaman */}
-          <li className={ this.isPathActive('/profil') || this.isPathActive('/form') || this.isPathActive('/daftar') ? 'nav-item active' : 'nav-item' }>
+          <li className={ this.isPathActive('/blank-page-1') || this.isPathActive('/blank-page-2') || this.isPathActive('/blank-page-3') ? 'nav-item active' : 'nav-item' }>
             <div className={ this.state.menuOpen ? 'nav-link menu-expanded' : 'nav-link' } onClick={ () => this.toggleMenuState('menuOpen') } data-toggle="collapse">
               <span className="menu-title"><Trans>Menu Utama</Trans></span>
               <i className="menu-arrow"></i>
@@ -73,9 +73,9 @@ class Sidebar extends Component {
             </div>
             <Collapse in={ this.state.menuOpen }>
               <ul className="nav flex-column sub-menu">
-                <li className="nav-item"> <Link className={ this.isPathActive('/profil-mahasiswa') ? 'nav-link active' : 'nav-link' } to="/profil-mahasiswa"><Trans>Halaman Pertama</Trans></Link></li>
-                <li className="nav-item"> <Link className={ this.isPathActive('/form-pendaftaran') ? 'nav-link active' : 'nav-link' } to="/form-pendaftaran"><Trans>Halaman Kedua</Trans></Link></li>
-                <li className="nav-item"> <Link className={ this.isPathActive('/daftar-mahasiswa') ? 'nav-link active' : 'nav-link' } to="/daftar-mahasiswa"><Trans>Halaman Ketiga</Trans></Link></li>
+                <li className="nav-item"> <Link className={ this.isPathActive('/blank-page-1') ? 'nav-link active' : 'nav-link' } to="/blank-page-1"><Trans>Blank Page 1</Trans></Link></li>
+                <li className="nav-item"> <Link className={ this.isPathActive('/blank-page-2') ? 'nav-link active' : 'nav-link' } to="/blank-page-2"><Trans>Blank Page 2</Trans></Link></li>
+                <li className="nav-item"> <Link className={ this.isPathActive('/blank-page-3') ? 'nav-link active' : 'nav-link' } to="/blank-page-3"><Trans>Blank Page 3</Trans></Link></li>
               </ul>
             </Collapse>
           </li>
