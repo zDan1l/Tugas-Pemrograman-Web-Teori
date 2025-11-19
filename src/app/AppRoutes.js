@@ -3,13 +3,10 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Spinner from '../app/shared/Spinner';
 
-// General Pages - Proyek Tugas
-const BlankPage = lazy(() => import('./general-pages/BlankPage'));
-const MyBlankPage = lazy(() => import('./general-pages/MyBlankPage'));
+// Halaman Tugas
 const Page1 = lazy(() => import('./general-pages/Page1'));
 const Page2 = lazy(() => import('./general-pages/Page2'));
 const Page3 = lazy(() => import('./general-pages/Page3'));
-const Page4 = lazy(() => import('./general-pages/Page4'));
 
 
 class AppRoutes extends Component {
@@ -17,16 +14,13 @@ class AppRoutes extends Component {
     return (
       <Suspense fallback={<Spinner/>}>
         <Switch>
-          {/* General Pages Routes */}
-          <Route path="/blank-page" component={ BlankPage } />
-          <Route path="/my-blank-page" component={ MyBlankPage } />
-          <Route path="/page1" component={ Page1 } />
-          <Route path="/page2" component={ Page2 } />
-          <Route path="/page3" component={ Page3 } />
-          <Route path="/page4" component={ Page4 } />
+          {/* Routes Halaman Tugas */}
+          <Route path="/profil-mahasiswa" component={ Page1 } />
+          <Route path="/form-pendaftaran" component={ Page2 } />
+          <Route path="/daftar-mahasiswa" component={ Page3 } />
 
-          {/* Redirect root ke page pertama */}
-          <Redirect to="/page1" />
+          {/* Redirect root ke halaman pertama */}
+          <Redirect to="/profil-mahasiswa" />
         </Switch>
       </Suspense>
     );

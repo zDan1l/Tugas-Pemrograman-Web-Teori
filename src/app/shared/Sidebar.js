@@ -33,9 +33,9 @@ class Sidebar extends Component {
     });
 
     const dropdownPaths = [
-      {path:'/page', state: 'pagesMenuOpen'},
-      {path:'/blank-page', state: 'pagesMenuOpen'},
-      {path:'/my-blank-page', state: 'pagesMenuOpen'},
+      {path:'/profil', state: 'menuOpen'},
+      {path:'/form', state: 'menuOpen'},
+      {path:'/daftar', state: 'menuOpen'},
     ];
 
     dropdownPaths.forEach((obj => {
@@ -64,21 +64,18 @@ class Sidebar extends Component {
             </a>
           </li>
           
-          {/* Menu Halaman Tugas */}
-          <li className={ this.isPathActive('/page') || this.isPathActive('/blank-page') || this.isPathActive('/my-blank-page') ? 'nav-item active' : 'nav-item' }>
-            <div className={ this.state.pagesMenuOpen ? 'nav-link menu-expanded' : 'nav-link' } onClick={ () => this.toggleMenuState('pagesMenuOpen') } data-toggle="collapse">
-              <span className="menu-title"><Trans>Halaman Tugas</Trans></span>
+          {/* Menu Halaman */}
+          <li className={ this.isPathActive('/profil') || this.isPathActive('/form') || this.isPathActive('/daftar') ? 'nav-item active' : 'nav-item' }>
+            <div className={ this.state.menuOpen ? 'nav-link menu-expanded' : 'nav-link' } onClick={ () => this.toggleMenuState('menuOpen') } data-toggle="collapse">
+              <span className="menu-title"><Trans>Menu Utama</Trans></span>
               <i className="menu-arrow"></i>
-              <i className="mdi mdi-file-document-box menu-icon"></i>
+              <i className="mdi mdi-view-list menu-icon"></i>
             </div>
-            <Collapse in={ this.state.pagesMenuOpen }>
+            <Collapse in={ this.state.menuOpen }>
               <ul className="nav flex-column sub-menu">
-                <li className="nav-item"> <Link className={ this.isPathActive('/page1') ? 'nav-link active' : 'nav-link' } to="/page1"><Trans>Profil Mahasiswa</Trans></Link></li>
-                <li className="nav-item"> <Link className={ this.isPathActive('/page2') ? 'nav-link active' : 'nav-link' } to="/page2"><Trans>Form Input</Trans></Link></li>
-                <li className="nav-item"> <Link className={ this.isPathActive('/page3') ? 'nav-link active' : 'nav-link' } to="/page3"><Trans>Data Mahasiswa</Trans></Link></li>
-                <li className="nav-item"> <Link className={ this.isPathActive('/page4') ? 'nav-link active' : 'nav-link' } to="/page4"><Trans>Dashboard</Trans></Link></li>
-                <li className="nav-item"> <Link className={ this.isPathActive('/blank-page') ? 'nav-link active' : 'nav-link' } to="/blank-page"><Trans>Blank Page</Trans></Link></li>
-                <li className="nav-item"> <Link className={ this.isPathActive('/my-blank-page') ? 'nav-link active' : 'nav-link' } to="/my-blank-page"><Trans>My Blank Page</Trans></Link></li>
+                <li className="nav-item"> <Link className={ this.isPathActive('/profil-mahasiswa') ? 'nav-link active' : 'nav-link' } to="/profil-mahasiswa"><Trans>Halaman Pertama</Trans></Link></li>
+                <li className="nav-item"> <Link className={ this.isPathActive('/form-pendaftaran') ? 'nav-link active' : 'nav-link' } to="/form-pendaftaran"><Trans>Halaman Kedua</Trans></Link></li>
+                <li className="nav-item"> <Link className={ this.isPathActive('/daftar-mahasiswa') ? 'nav-link active' : 'nav-link' } to="/daftar-mahasiswa"><Trans>Halaman Ketiga</Trans></Link></li>
               </ul>
             </Collapse>
           </li>
